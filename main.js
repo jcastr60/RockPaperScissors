@@ -10,14 +10,14 @@ function getComputerChoice(){
 }
 
 function playRound(ComputerSelection, playerSelection){
-    if (playerSelection == "rock" && ComputerSelection ==  "scissor") {
+    if (playerSelection == 'rock' && ComputerSelection ==  "scissor") {
         return "You Won! Rock beats Scissor";
         // playerWins++;
         
-    } else if (playerSelection == "paper" && ComputerSelection ==  "rock"){
+    } else if (playerSelection == 'paper' && ComputerSelection ==  "rock"){
         return "You Won! Paper beats Rock";
         // playerWins++;
-    }  else if (playerSelection == "scissor" && ComputerSelection ==  "paper"){
+    }  else if (playerSelection == 'scissor' && ComputerSelection ==  "paper"){
         return "You Won! Scissor beats Rock";
         // playerWins++;
     } else {
@@ -32,8 +32,6 @@ function playGame(){
     // // Count number of wins
     // let computerWins = 0;
     // let playerWins = 0;
-
-    // var name = prompt("Rock, Paper, or Scissor?");
     // // loop to keep playing game until one openet has 5 wins
     // while ((playerWins < 5) || (computerWins < 5)) {
     //     if (name != "rock" || name != "paper" || name != "scissor"){
@@ -43,12 +41,16 @@ function playGame(){
     //         playRound(getComputerChoice(), playerSelection, computerWins, playerWins);
     //     }
     // }
-
-    console.log(playRound(getComputerChoice(), "rock"));
-    console.log(playRound(getComputerChoice(),"paper"));
-    console.log(playRound(getComputerChoice(), "scissors"));
-    console.log(playRound(getComputerChoice(),"rock"));
-    console.log(playRound(getComputerChoice(), "paper"));
+    let name = prompt("Rock, Paper, or Scissor?");
+    console.log(playRound(getComputerChoice(), name));
+    name = prompt("Rock, Paper, or Scissor?");
+    console.log(playRound(getComputerChoice(),name));
+    name = prompt("Rock, Paper, or Scissor?");
+    console.log(playRound(getComputerChoice(), name));
+    name = prompt("Rock, Paper, or Scissor?");
+    console.log(playRound(getComputerChoice(),name));
+    name = prompt("Rock, Paper, or Scissor?");
+    console.log(playRound(getComputerChoice(), name));
 }
 
 // console.log(getComputerChoice());
